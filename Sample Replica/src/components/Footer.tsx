@@ -28,7 +28,7 @@ function NavItem({ label, hasDropdown = false, href = '#' }: { label: string; ha
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className="relative isolate overflow-hidden bg-transparent text-white">
+    <footer id="contact" className="relative isolate overflow-hidden bg-transparent text-white scroll-mt-24 md:scroll-mt-28">
 
       <div className="mx-auto max-w-6xl px-4 py-12">
         {/* Top: tagline and nav on a subtle glass bar */}

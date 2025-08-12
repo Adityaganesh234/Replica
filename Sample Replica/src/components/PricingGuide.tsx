@@ -11,7 +11,7 @@ export default function PricingGuide(): JSX.Element {
   }
 
   return (
-    <section className="relative isolate overflow-hidden py-16 md:py-24">
+    <section id="about" className="relative isolate overflow-hidden py-16 md:py-24 scroll-mt-24 md:scroll-mt-28">
       {/* Section relies on global gym-themed background */}
 
       <div className="mx-auto max-w-4xl px-4">

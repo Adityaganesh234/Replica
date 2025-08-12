@@ -9,7 +9,7 @@ type HeroProps = {
 
 export default function Hero({ businessType = 'Yoga Studio' }: HeroProps): JSX.Element {
   return (
-    <section id="home" className="relative isolate overflow-hidden">
+    <section id="home" className="relative isolate overflow-hidden scroll-mt-24 md:scroll-mt-28">
       {/* Background visuals are now handled globally by Background.tsx for consistency */}
 
       <div className="mx-auto max-w-6xl px-4 py-16 text-center md:py-24">
