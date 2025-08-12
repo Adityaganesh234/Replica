@@ -18,7 +18,7 @@ export default function NavLinks({ orientation = 'horizontal', className }: NavL
     <ul
       className={[
         isHorizontal ? 'flex items-center gap-6' : 'flex flex-col items-center gap-4',
-        'text-sm font-medium text-gray-700',
+        'text-sm font-medium text-gray-200',
         className ?? '',
       ].join(' ')}
     >
@@ -26,7 +26,7 @@ export default function NavLinks({ orientation = 'horizontal', className }: NavL
         <li key={link.href}>
           <a
             href={link.href}
-            className="transition-colors hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
+            className="transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded"
           >
             {link.label}
           </a>

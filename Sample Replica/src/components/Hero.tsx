@@ -10,15 +10,10 @@ type HeroProps = {
 export default function Hero({ businessType = 'Yoga Studio' }: HeroProps): JSX.Element {
   return (
     <section id="home" className="relative isolate overflow-hidden">
-      {/* Liquid gradient blobs background */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-[-10%] top-[-20%] h-[360px] w-[520px] rounded-full bg-gradient-to-tr from-orange-300/50 via-rose-300/40 to-indigo-300/40 blur-3xl animate-liquid" />
-        <div className="absolute right-[-10%] top-[-10%] h-[300px] w-[480px] rounded-full bg-gradient-to-tr from-indigo-300/40 via-cyan-300/40 to-emerald-300/40 blur-3xl animate-liquid" />
-        <div className="absolute bottom-[-20%] left-1/3 h-[320px] w-[520px] rounded-full bg-gradient-to-tr from-amber-300/40 via-pink-300/30 to-purple-300/40 blur-3xl animate-liquid" />
-      </div>
+      {/* Background visuals are now handled globally by Background.tsx for consistency */}
 
       <div className="mx-auto max-w-6xl px-4 py-16 text-center md:py-24">
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
           <span className="block">Websites That Help Grow Your</span>
           <Typewriter
             words={[
@@ -27,17 +22,20 @@ export default function Hero({ businessType = 'Yoga Studio' }: HeroProps): JSX.E
               'Martial Arts Academy',
             ]}
             className="block"
-            highlightClassName="text-orange-600"
+            highlightClassName="text-orange-200"
           />
         </h1>
-        <p className="mx-auto mt-4 max-w-3xl text-base text-gray-700 md:text-lg">
+        <p className="mx-auto mt-4 max-w-3xl text-base text-gray-200 md:text-lg drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
           We help gyms and fitness studios get more leads and customers with website design & authentic,
           on-brand digital marketing.
         </p>
         <div className="mt-8 flex justify-center">
-          <Button as="a" href="#consultation" className="bg-orange-600 hover:bg-orange-500">
+          {/* <Button as="a" href="#consultation" className="bg-orange-600 hover:bg-orange-500">
             Get A Free Consultation →
-          </Button>
+          </Button> */}
+            <Button type="submit" variant="glass" className="w-autorounded-xl py-3 text-base font-semibold">
+            Get A Free Consultation →
+            </Button>
         </div>
 
         <div className="mt-12 md:mt-16">

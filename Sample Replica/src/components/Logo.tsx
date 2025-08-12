@@ -6,7 +6,7 @@ export default function Logo(): JSX.Element {
       <img
         src="https://bravegymmarketing.com/wp-content/uploads/2023/09/BRAVE-Logo-1.png"
         alt="BRAVE"
-        className="h-8 w-20"
+        className="h-11 w-23"
       />
       <span className="sr-only">Home</span>
     </a>

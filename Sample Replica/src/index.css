@@ -19,5 +19,43 @@
   .animate-liquid {
     animation: liquid 18s ease-in-out infinite alternate;
   }
+
+  @keyframes float-slow {
+    0% { transform: translate3d(-4%, 2%, 0) scale(1); }
+    50% { transform: translate3d(3%, -3%, 0) scale(1.04); }
+    100% { transform: translate3d(-2%, 1%, 0) scale(1.02); }
+  }
+  .animate-float-slow {
+    animation: float-slow 30s ease-in-out infinite alternate;
+  }
+
+  /* Soft pulsing glow used to keep focus on foreground */
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.08; }
+    50% { opacity: 0.14; }
+  }
+  .animate-glow-pulse {
+    animation: glow-pulse 6s ease-in-out infinite;
+  }
+
+  /* Moving light sweep for dynamic lighting */
+  @keyframes sweep-light {
+    0% { transform: translateX(-30%); }
+    50% { transform: translateX(50%); }
+    100% { transform: translateX(130%); }
+  }
+  .animate-sweep-light {
+    animation: sweep-light 14s ease-in-out infinite;
+  }
+
+  /* Slow Ken Burns effect for hero background image */
+  @keyframes kenburns {
+    0% { transform: scale(1.06) translate3d(0, 0, 0); }
+    50% { transform: scale(1.095) translate3d(1%, -1%, 0); }
+    100% { transform: scale(1.13) translate3d(-1%, 1%, 0); }
+  }
+  .animate-kenburns {
+    animation: kenburns 24s ease-in-out infinite alternate;
+  }
 }
 

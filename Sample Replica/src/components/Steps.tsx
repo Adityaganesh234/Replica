@@ -1,4 +1,5 @@
 import React from 'react'
+import RevealOnScroll from './RevealOnScroll'
 
 type Step = {
   title: string
@@ -8,7 +9,7 @@ type Step = {
 
 function CircleIcon({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-600 text-white">
+    <div className="flex h-6 w-10 items-center justify-center rounded-2xl bg-orange-200 text-white">
       {children}
     </div>
   )
@@ -149,30 +150,30 @@ const steps: Step[] = [
 export default function Steps(): JSX.Element {
   return (
     <section className="relative isolate overflow-hidden py-16 md:py-24">
-      {/* Liquid gradient blobs background */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-[-12%] top-[-20%] h-[320px] w-[520px] rounded-full bg-gradient-to-tr from-orange-300/50 via-rose-300/40 to-indigo-300/40 blur-3xl animate-liquid" />
-        <div className="absolute right-[-10%] bottom-[-16%] h-[300px] w-[500px] rounded-full bg-gradient-to-tr from-cyan-300/40 via-emerald-300/40 to-indigo-300/40 blur-3xl animate-liquid" />
-      </div>
+      {/* Section relies on global gym-themed background */}
 
       <div className="mx-auto max-w-2xl px-4">
-        <h2 className="mb-8 text-center text-2xl font-extrabold leading-tight text-black md:mb-10 md:text-3xl">
-          <span className="block">How we help you get more members</span>
-          <span className="block">for your Fitness Business:</span>
-        </h2>
+        <RevealOnScroll animation="up" delayMs={60}>
+          <h2 className="mb-8 text-center text-2xl font-extrabold leading-tight text-white md:mb-10 md:text-3xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+            <span className="block">How we help you get more members</span>
+            <span className="block">for your Fitness Business:</span>
+          </h2>
+        </RevealOnScroll>
         <ul className="space-y-10">
-          {steps.map(({ title, description, Icon }) => (
-            <li key={title} className="mx-auto">
-              <div className="flex items-start gap-3">
-                <Icon />
-                <div className="text-left">
-                  <h3 className="text-[17px] font-extrabold text-orange-600 leading-6">{title}</h3>
-                  <p className="mt-2 text-sm text-gray-800">
-                    {description}
-                  </p>
+          {steps.map(({ title, description, Icon }, index) => (
+            <RevealOnScroll key={title} animation="up" delayMs={80 + index * 80}>
+              <li className="mx-auto">
+                <div className="flex items-start gap-3">
+                  <Icon />
+                  <div className="text-left">
+                    <h3 className="text-[17px] font-extrabold text-orange-200 leading-6">{title}</h3>
+                    <p className="mt-2 text-sm text-gray-100">
+                      {description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </RevealOnScroll>
           ))}
         </ul>
       </div>

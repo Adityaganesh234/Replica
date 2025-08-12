@@ -9,10 +9,12 @@ import ReputationManagement from './components/ReputationManagement'
 import Steps from './components/Steps'
 import PricingGuide from './components/PricingGuide'
 import Footer from './components/Footer'
+import Background from './components/Background'
 
 export default function App(): JSX.Element {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="relative min-h-screen">
+      <Background />
       <Navbar />
       <main>
         <Hero businessType="Yoga Studio" />

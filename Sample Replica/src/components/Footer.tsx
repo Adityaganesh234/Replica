@@ -4,7 +4,7 @@ function NavItem({ label, hasDropdown = false, href = '#' }: { label: string; ha
   return (
     <a
       href={href}
-      className="inline-flex items-center gap-1.5 text-sm font-medium text-black hover:opacity-80"
+      className="inline-flex items-center gap-1.5 text-sm font-medium text-white hover:opacity-80"
     >
       <span>{label}</span>
       {hasDropdown && (
@@ -28,16 +28,11 @@ function NavItem({ label, hasDropdown = false, href = '#' }: { label: string; ha
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className="relative isolate overflow-hidden bg-white text-black">
-      {/* Liquid gradient blobs background */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-[-12%] top-[-20%] h-[260px] w-[520px] rounded-full bg-gradient-to-tr from-orange-300/50 via-rose-300/40 to-indigo-300/40 blur-3xl animate-liquid" />
-        <div className="absolute right-[-10%] bottom-[-18%] h-[240px] w-[520px] rounded-full bg-gradient-to-tr from-cyan-300/40 via-emerald-300/40 to-indigo-300/40 blur-3xl animate-liquid" />
-      </div>
+    <footer className="relative isolate overflow-hidden bg-transparent text-white">
 
       <div className="mx-auto max-w-6xl px-4 py-12">
-        {/* Top: tagline and nav on a glass bar */}
-        <div className="grid grid-cols-1 items-start gap-8 rounded-2xl border border-white/20 bg-white/40 p-6 backdrop-blur supports-[backdrop-filter]:bg-white/35 md:grid-cols-2">
+        {/* Top: tagline and nav on a subtle glass bar */}
+        <div className="grid grid-cols-1 items-start gap-8 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur supports-[backdrop-filter]:bg-white/5 md:grid-cols-2">
           <p className="max-w-xl text-lg font-bold leading-snug md:text-xl">
             Attract More Students With Professional Quality Web Design & Digital Marketing.
           </p>
@@ -64,7 +59,7 @@ export default function Footer(): JSX.Element {
         </div>
 
         {/* Bottom: meta on a subtle glass bar */}
-        <div className="mt-8 rounded-2xl border border-white/20 bg-white/40 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/35">
+        <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur supports-[backdrop-filter]:bg-white/5">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <p className="text-sm">© 2025 • Made With Love, LLC</p>
             <a
